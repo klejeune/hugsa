@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4D58C9EC-DFD7-4C43-B618-021105976817}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hugsa.Core</RootNamespace>
+    <AssemblyName>Hugsa.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Data\Texts.cs" />
+    <Compile Include="Engine\Memories\MemoryContainer.cs" />
+    <Compile Include="Engine\NamedEntitiesAnalysis\CandidateTypes\AbstractCandidateType.cs" />
+    <Compile Include="Engine\NamedEntitiesAnalysis\CandidateTypes\FirstUpperCandidateType.cs" />
+    <Compile Include="Engine\NamedEntitiesAnalysis\CandidateTypes\NumberCandidateType.cs" />
+    <Compile Include="Engine\NamedEntitiesAnalysis\CandidateTypes\SigleCandidateType.cs" />
+    <Compile Include="Engine\SyntaxicAnalysis\EntityInformation.cs" />
+    <Compile Include="Engine\SyntaxicAnalysis\EvaluationContext.cs" />
+    <Compile Include="Engine\SyntaxicAnalysis\Evaluator.cs" />
+    <Compile Include="Engine\SyntaxicAnalysis\Expressions\PropositionExpressions.cs" />
+    <Compile Include="Engine\SyntaxicAnalysis\IContext.cs" />
+    <Compile Include="Engine\SyntaxicAnalysis\SentenceAnalysisReport.cs" />
+    <Compile Include="Engine\SyntaxicAnalysis\SentenceAnalyzer.cs" />
+    <Compile Include="Engine\SyntaxicAnalysis\SentenceContext.cs" />
+    <Compile Include="Engine\SyntaxicAnalysis\SentenceParts\ISentencePart.cs" />
+    <Compile Include="Engine\SyntaxicAnalysis\SentenceParts\NominalPhrase.cs" />
+    <Compile Include="Engine\SyntaxicAnalysis\SentenceParts\Subject.cs" />
+    <Compile Include="Engine\SyntaxicAnalysis\SentenceParts\SubjectAttribute.cs" />
+    <Compile Include="Engine\SyntaxicAnalysis\SentenceParts\TimespanIntroductionPart.cs" />
+    <Compile Include="Engine\SyntaxicAnalysis\SentenceParts\TimespanSentencePart.cs" />
+    <Compile Include="Engine\SyntaxicAnalysis\SentenceParts\VerbPart.cs" />
+    <Compile Include="Engine\SyntaxicAnalysis\TableComputer.cs" />
+    <Compile Include="Engine\SyntaxicAnalysis\UnrecognizedPhraseException.cs" />
+    <Compile Include="Engine\WordTagging\Dictionaries\AdjectifPossessifDictionary.cs" />
+    <Compile Include="Engine\WordTagging\Dictionaries\AdjectiveDictionary.cs" />
+    <Compile Include="Engine\WordTagging\Dictionaries\AdverbDictionary.cs" />
+    <Compile Include="Engine\WordTagging\Dictionaries\ConjunctionDictionary.cs" />
+    <Compile Include="Engine\WordTagging\Dictionaries\ContractionDictionary.cs" />
+    <Compile Include="Engine\WordTagging\Dictionaries\DemonstrativePronounDictionary.cs" />
+    <Compile Include="Engine\WordTagging\Dictionaries\DeterminantDictionary.cs" />
+    <Compile Include="Engine\WordTagging\Dictionaries\QuantifierDictionary.cs" />
+    <Compile Include="Engine\WordTagging\Dictionaries\NounDictionary.cs" />
+    <Compile Include="Engine\WordTagging\Dictionaries\NumeralAdjectiveDictionary.cs" />
+    <Compile Include="Engine\WordTagging\Dictionaries\ParticipePasseVerbDictionary.cs" />
+    <Compile Include="Engine\WordTagging\Dictionaries\NegationDictionary.cs" />
+    <Compile Include="Engine\WordTagging\Dictionaries\PersonalPronounDictionary.cs" />
+    <Compile Include="Engine\WordTagging\Dictionaries\PrepositionDictionary.cs" />
+    <Compile Include="Engine\WordTagging\Dictionaries\ProperNounPseudoDictionary.cs" />
+    <Compile Include="Engine\WordTagging\WordCategories\QuantifierDeterminant.cs" />
+    <Compile Include="Engine\WordTagging\Dictionaries\RelativePronounDictionary.cs" />
+    <Compile Include="Engine\WordTagging\Dictionaries\VerbDictionary.cs" />
+    <Compile Include="Engine\WordTagging\Dictionaries\DictionaryAnalysisReport.cs" />
+    <Compile Include="Engine\WordTagging\Dictionaries\DictionaryAnalyzer.cs" />
+    <Compile Include="Engine\WordTagging\Dictionaries\IDictionary.cs" />
+    <Compile Include="Engine\WordTagging\IWordCategory.cs" />
+    <Compile Include="Engine\NamedEntitiesAnalysis\NamedEntityManager.cs" />
+    <Compile Include="Engine\NamedEntitiesAnalysis\NamedEntityTypes\AbstractNamedEntityType.cs" />
+    <Compile Include="Engine\NamedEntitiesAnalysis\NamedEntityTypes\OrganisationNamedEntityType.cs" />
+    <Compile Include="Engine\NamedEntitiesAnalysis\NamedEntityTypes\PersonNamedEntityType.cs" />
+    <Compile Include="Engine\NamedEntitiesAnalysis\NamedEntityTypes\PlaceNamedEntityType.cs" />
+    <Compile Include="Engine\NamedEntitiesAnalysis\NamedEntity\AbstractNamedEntity.cs" />
+    <Compile Include="Engine\WordTagging\WordCategories\AdjectifPossessif.cs" />
+    <Compile Include="Engine\WordTagging\WordCategories\Adverb.cs" />
+    <Compile Include="Engine\WordTagging\WordCategories\Attributes\AdverbType.cs" />
+    <Compile Include="Engine\WordTagging\WordCategories\Attributes\Cas.cs" />
+    <Compile Include="Engine\WordTagging\WordCategories\Attributes\ConjunctionType.cs" />
+    <Compile Include="Engine\WordTagging\WordCategories\Conjunction.cs" />
+    <Compile Include="Engine\WordTagging\WordCategories\Contraction.cs" />
+    <Compile Include="Engine\WordTagging\WordCategories\DemonstrativePronoun.cs" />
+    <Compile Include="Engine\WordTagging\WordCategories\Determinant.cs" />
+    <Compile Include="Engine\WordTagging\WordCategories\Quantifier.cs" />
+    <Compile Include="Engine\WordTagging\WordCategories\Noun.cs" />
+    <Compile Include="Engine\NamedEntitiesAnalysis\SemanticsData\ISemantics.cs" />
+    <Compile Include="Engine\NamedEntitiesAnalysis\SemanticsData\NamedEntitySemantics.cs" />
+    <Compile Include="Engine\NamedEntitiesAnalysis\SemanticsData\UnknownWordSemantics.cs" />
+    <Compile Include="Engine\Sentence.cs" />
+    <Compile Include="Engine\Statistics\StatisticalAnalyzer.cs" />
+    <Compile Include="Engine\Statistics\StatisticalAnalysisReport.cs" />
+    <Compile Include="Engine\WordTagging\WordCategories\ProperNoun.cs" />
+    <Compile Include="Engine\Text.cs" />
+    <Compile Include="Engine\TextAnalysisReport.cs" />
+    <Compile Include="Engine\TextAnalyzer.cs" />
+    <Compile Include="Engine\WordTagging\WordCategories\NumeralAdjective.cs" />
+    <Compile Include="Engine\WordTagging\WordCategories\ParticipePasseVerb.cs" />
+    <Compile Include="Engine\WordTagging\WordCategories\Negation.cs" />
+    <Compile Include="Engine\WordTagging\WordCategories\RelativePronoun.cs" />
+    <Compile Include="Engine\WordTagging\WordCategories\Verb.cs" />
+    <Compile Include="Engine\Word.cs" />
+    <Compile Include="Engine\WordTagging\WordCategories\Adjective.cs" />
+    <Compile Include="Engine\WordTagging\WordCategories\IWordRepository.cs" />
+    <Compile Include="Engine\WordTagging\WordCategories\Preposition.cs" />
+    <Compile Include="Engine\WordTagging\WordCategories\PersonalPronoun.cs" />
+    <Compile Include="Engine\WordTagging\WordCategories\Attributes\Gender.cs" />
+    <Compile Include="Engine\WordTagging\WordCategories\Attributes\Number.cs" />
+    <Compile Include="Engine\WordTagging\WordCategoryType.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Hugsa.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

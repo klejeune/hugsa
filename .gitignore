@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/src/Hugsa/Hugsa.Console/bin/Debug
+/src/Hugsa/Hugsa.Console/obj/Debug
+*.suo
+/src/Hugsa/Hugsa.Core/bin/Debug
+*.user
+/src/Hugsa/Hugsa.Core/obj/Debug
